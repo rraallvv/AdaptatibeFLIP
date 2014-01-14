@@ -224,10 +224,10 @@ void glviewer::drawGL() {
 		glColor4d(1.0,1.0,1.0,1.0);
 		glRasterPos2d((winsize[0]-130)/(double)winsize[0],(winsize[1]-40)/(double)winsize[1]);
 		static float fps = 0;
-		float frame = 100.0f/sim.msec;
+		float frame = 1000.0f/sim.msec;
 		if (!isinf(frame))
-			fps = frame + 0.9f*fps;
-		drawBitmapString(format_str("FPS: %6.2f", fps),GLUT_BITMAP_HELVETICA_18);
+			fps = 0.1f*frame + 0.9f*fps;
+		drawBitmapString(format_str("FPS: %.2f", fps),GLUT_BITMAP_HELVETICA_18);
 	}
 	
 #if 0
