@@ -140,7 +140,7 @@ glhelpviewer::glhelpviewer( glviewer& viewer, flip2& sim ) : viewer(viewer), sim
 	default_visibilityStates = visibilityStates;
 
 	controllerStates.push_back(0);		// show help
-	controllerStates.push_back(16);		// resolution
+	controllerStates.push_back(8);		// resolution
 	controllerStates.push_back(2);		// free surface boundary accuracy
 	controllerStates.push_back(1);		// variational pressure solver
 	controllerStates.push_back(1);		// spring correction
