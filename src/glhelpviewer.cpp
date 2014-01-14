@@ -240,71 +240,71 @@ bool glhelpviewer::keyDown( char key ) {
 	bool keyHandled = false;
 	// Detect vibility key change
 	for( int i=0; i<numVisibilityKeys; i++ ) {
-		if( key == visibilityKeys[i] ) {
+		if( key == visibilityKeys[i] || tolower(key == visibilityKeys[i]) ) {
 			visibilityStates[i] = ! visibilityStates[i];
 			keyHandled = true;
 		}
 	}
 	bool reset = false;
 	
-	if( key == controllerKeys[K_HELP] ) {
+	if( key == controllerKeys[K_HELP] || key == tolower(controllerKeys[K_HELP]) ) {
 		controllerStates[K_HELP] = ! controllerStates[K_HELP];
 		keyHandled = true;
-	} else if( key == controllerKeys[K_RESTORE] ) {
+	} else if( key == controllerKeys[K_RESTORE] || key == tolower(controllerKeys[K_RESTORE]) ) {
 		restoreDefaults();
 		keyHandled = true;
-	} else if( key == controllerKeys[K_RESET] ) {
+	} else if( key == controllerKeys[K_RESET] || key == tolower(controllerKeys[K_RESET]) ) {
 		reset = true;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_INCR] ) {
+	} else if( key == controllerKeys[K_INCR] || key == tolower(controllerKeys[K_INCR]) ) {
 		uint gn = controllerStates[S_RES];
 		if( gn < MAX_RES ) {
 			controllerStates[S_RES] = 2*gn;
 		}
 		keyHandled = true;
-	} else if( key == controllerKeys[K_DECR] ) {
+	} else if( key == controllerKeys[K_DECR] || key == tolower(controllerKeys[K_DECR]) ) {
 		uint gn = controllerStates[S_RES];
 		if( gn > MIN_RES ) {
 			controllerStates[S_RES] = gn/2;
 		}
 		keyHandled = true;
-	} else if( key == controllerKeys[K_SURF] ) {
+	} else if( key == controllerKeys[K_SURF] || key == tolower(controllerKeys[K_SURF]) ) {
 		int order = controllerStates[S_SURF];
 		order = order == 1 ? 2 : 1;
 		controllerStates[S_SURF] = order;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_VARIATION] ) {
+	} else if( key == controllerKeys[K_VARIATION] || key == tolower(controllerKeys[K_VARIATION]) ) {
 		int enabled = controllerStates[S_VARIATION];
 		enabled = enabled == 1 ? 0 : 1;
 		controllerStates[S_VARIATION] = enabled;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_CORRECTION] ) {
+	} else if( key == controllerKeys[K_CORRECTION] || key == tolower(controllerKeys[K_CORRECTION]) ) {
 		int state = controllerStates[S_CORRECTION];
 		state = (state+1)%2;
 		controllerStates[S_CORRECTION] = state;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_SCENE] ) {
+	} else if( key == controllerKeys[K_SCENE] || key == tolower(controllerKeys[K_SCENE]) ) {
 		int num = controllerStates[S_SCENE];
 		num = (num+1) % NUMSCENE;
 		controllerStates[S_SCENE] = num;
 		reset = true;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_ADAPTIVE] ) {
+	} else if( key == controllerKeys[K_ADAPTIVE] || key == tolower(controllerKeys[K_ADAPTIVE]) ) {
 		int enabled = controllerStates[S_ADAPTIVE];
 		enabled = enabled == 1 ? 0 : 1;
 		controllerStates[S_ADAPTIVE] = enabled;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_SOLVER] ) {
+	} else if( key == controllerKeys[K_SOLVER] || key == tolower(key == controllerKeys[K_SOLVER]) ) {
 		int name = controllerStates[S_SOLVER];
 		name = (name+1)%4;
 		controllerStates[S_SOLVER] = name;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_REMESH] ) {
+	} else if( key == controllerKeys[K_REMESH] || key == tolower(key == controllerKeys[K_REMESH]) ) {
 		int enabled = controllerStates[S_REMESH];
 		enabled = enabled == 1 ? 0 : 1;
 		controllerStates[S_REMESH] = enabled;
 		keyHandled = true;
-	} else if( key == controllerKeys[K_MESHER] ) {
+	} else if( key == controllerKeys[K_MESHER] || key == tolower(key == controllerKeys[K_MESHER]) ) {
 		int num = controllerStates[S_MESHER];
 		num = (num+1) % 4;
 		controllerStates[S_MESHER] = num;
@@ -346,7 +346,7 @@ void glhelpviewer::drawGL() {
 				statusText[0] = 0;
 			}
 			
-			sprintf( text, controllerString[i], controllerKeys[i], statusText );
+			sprintf( text, controllerString[i], toupper(controllerKeys[i]), statusText );
 			glviewer::drawBitmapString(text,GLUT_BITMAP_HELVETICA_10);
 		}
 	}
@@ -361,7 +361,7 @@ void glhelpviewer::drawGL() {
 				statusText[0] = 0;
 			}
 			
-			sprintf( text, visibilityString[j], visibilityKeys[j], statusText );
+			sprintf( text, visibilityString[j], toupper(visibilityKeys[j]), statusText );
 			glviewer::drawBitmapString(text,GLUT_BITMAP_HELVETICA_10);
 		}
 	}
