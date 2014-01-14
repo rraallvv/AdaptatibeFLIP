@@ -33,7 +33,6 @@
 		E47E890A188460E9007643BE /* extsurf2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88BB188460E9007643BE /* extsurf2.cpp */; };
 		E47E890B188460E9007643BE /* fastmarch2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88BD188460E9007643BE /* fastmarch2.cpp */; };
 		E47E890C188460E9007643BE /* femfluid2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88BF188460E9007643BE /* femfluid2.cpp */; };
-		E47E890D188460E9007643BE /* flip2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88C1188460E9007643BE /* flip2.cpp */; };
 		E47E890E188460E9007643BE /* fvmfluid2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88C4188460E9007643BE /* fvmfluid2.cpp */; };
 		E47E890F188460E9007643BE /* glhelpviewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88C6188460E9007643BE /* glhelpviewer.cpp */; };
 		E47E8910188460E9007643BE /* glviewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88C9188460E9007643BE /* glviewer.cpp */; };
@@ -44,12 +43,13 @@
 		E47E8915188460E9007643BE /* meshsurf2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88D4188460E9007643BE /* meshsurf2.cpp */; };
 		E47E8916188460E9007643BE /* octfluid2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88D6188460E9007643BE /* octfluid2.cpp */; };
 		E47E8917188460E9007643BE /* octree2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88DB188460E9007643BE /* octree2.cpp */; };
-		E47E8918188460E9007643BE /* particle2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88DF188460E9007643BE /* particle2.cpp */; };
 		E47E8919188460E9007643BE /* surf2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88E9188460E9007643BE /* surf2.cpp */; };
 		E47E891A188460E9007643BE /* umesher2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88ED188460E9007643BE /* umesher2.cpp */; };
 		E47E891B188460E9007643BE /* write_bmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47E88F1188460E9007643BE /* write_bmp.cpp */; };
 		E47E891D18846149007643BE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47E891C18846149007643BE /* OpenGL.framework */; };
 		E47E891F18846158007643BE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47E891E18846158007643BE /* GLUT.framework */; };
+		E4D1CE7B1884DA6D003FC6A6 /* flip2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1CE791884DA6D003FC6A6 /* flip2.cpp */; };
+		E4D1CE7F1884DAF6003FC6A6 /* particle2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D1CE7D1884DAF6003FC6A6 /* particle2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,7 +97,6 @@
 		E47E88A9188460E9007643BE /* ann2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ann2.h; sourceTree = "<group>"; };
 		E47E88AA188460E9007643BE /* annsorter2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = annsorter2.cpp; sourceTree = "<group>"; };
 		E47E88AB188460E9007643BE /* annsorter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = annsorter2.h; sourceTree = "<group>"; };
-		E47E88AC188460E9007643BE /* array2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array2.h; sourceTree = "<group>"; };
 		E47E88AD188460E9007643BE /* bcc2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bcc2.cpp; sourceTree = "<group>"; };
 		E47E88AE188460E9007643BE /* bcc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bcc2.h; sourceTree = "<group>"; };
 		E47E88AF188460E9007643BE /* bccmesher2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bccmesher2.cpp; sourceTree = "<group>"; };
@@ -118,9 +117,6 @@
 		E47E88BE188460E9007643BE /* fastmarch2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fastmarch2.h; sourceTree = "<group>"; };
 		E47E88BF188460E9007643BE /* femfluid2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = femfluid2.cpp; sourceTree = "<group>"; };
 		E47E88C0188460E9007643BE /* femfluid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = femfluid2.h; sourceTree = "<group>"; };
-		E47E88C1188460E9007643BE /* flip2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flip2.cpp; sourceTree = "<group>"; };
-		E47E88C2188460E9007643BE /* flip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flip2.h; sourceTree = "<group>"; };
-		E47E88C3188460E9007643BE /* fluid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fluid2.h; sourceTree = "<group>"; };
 		E47E88C4188460E9007643BE /* fvmfluid2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fvmfluid2.cpp; sourceTree = "<group>"; };
 		E47E88C5188460E9007643BE /* fvmfluid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fvmfluid2.h; sourceTree = "<group>"; };
 		E47E88C6188460E9007643BE /* glhelpviewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glhelpviewer.cpp; sourceTree = "<group>"; };
@@ -133,7 +129,6 @@
 		E47E88CD188460E9007643BE /* levelset2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelset2.h; sourceTree = "<group>"; };
 		E47E88CE188460E9007643BE /* macfluid2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = macfluid2.cpp; sourceTree = "<group>"; };
 		E47E88CF188460E9007643BE /* macfluid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macfluid2.h; sourceTree = "<group>"; };
-		E47E88D0188460E9007643BE /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		E47E88D1188460E9007643BE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E47E88D2188460E9007643BE /* mesher2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mesher2.cpp; sourceTree = "<group>"; };
 		E47E88D3188460E9007643BE /* mesher2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mesher2.h; sourceTree = "<group>"; };
@@ -148,8 +143,6 @@
 		E47E88DC188460E9007643BE /* octree2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = octree2.h; sourceTree = "<group>"; };
 		E47E88DD188460E9007643BE /* opengl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opengl.h; sourceTree = "<group>"; };
 		E47E88DE188460E9007643BE /* pann2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pann2.h; sourceTree = "<group>"; };
-		E47E88DF188460E9007643BE /* particle2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle2.cpp; sourceTree = "<group>"; };
-		E47E88E0188460E9007643BE /* particle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle2.h; sourceTree = "<group>"; };
 		E47E88E2188460E9007643BE /* blas_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blas_wrapper.h; sourceTree = "<group>"; };
 		E47E88E3188460E9007643BE /* matutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matutil.h; sourceTree = "<group>"; };
 		E47E88E4188460E9007643BE /* pcg_solver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pcg_solver.h; sourceTree = "<group>"; };
@@ -159,16 +152,23 @@
 		E47E88E8188460E9007643BE /* sorter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorter2.h; sourceTree = "<group>"; };
 		E47E88E9188460E9007643BE /* surf2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = surf2.cpp; sourceTree = "<group>"; };
 		E47E88EA188460E9007643BE /* surf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = surf2.h; sourceTree = "<group>"; };
-		E47E88EB188460E9007643BE /* svd2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svd2.h; sourceTree = "<group>"; };
 		E47E88EC188460E9007643BE /* testcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testcase.h; sourceTree = "<group>"; };
 		E47E88ED188460E9007643BE /* umesher2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = umesher2.cpp; sourceTree = "<group>"; };
 		E47E88EE188460E9007643BE /* umesher2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = umesher2.h; sourceTree = "<group>"; };
 		E47E88EF188460E9007643BE /* util2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util2.h; sourceTree = "<group>"; };
-		E47E88F0188460E9007643BE /* vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec2.h; sourceTree = "<group>"; };
 		E47E88F1188460E9007643BE /* write_bmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = write_bmp.cpp; sourceTree = "<group>"; };
 		E47E88F2188460E9007643BE /* write_bmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_bmp.h; sourceTree = "<group>"; };
 		E47E891C18846149007643BE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E47E891E18846158007643BE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		E4D1CE791884DA6D003FC6A6 /* flip2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flip2.cpp; sourceTree = "<group>"; };
+		E4D1CE7A1884DA6D003FC6A6 /* flip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flip2.h; sourceTree = "<group>"; };
+		E4D1CE7C1884DAC4003FC6A6 /* fluid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fluid2.h; sourceTree = "<group>"; };
+		E4D1CE7D1884DAF6003FC6A6 /* particle2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle2.cpp; sourceTree = "<group>"; };
+		E4D1CE7E1884DAF6003FC6A6 /* particle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle2.h; sourceTree = "<group>"; };
+		E4D1CE801884DB30003FC6A6 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		E4D1CE811884DB99003FC6A6 /* vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec2.h; sourceTree = "<group>"; };
+		E4D1CE821884DC21003FC6A6 /* svd2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svd2.h; sourceTree = "<group>"; };
+		E4D1CE831884DC46003FC6A6 /* array2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +210,6 @@
 				E47E88A9188460E9007643BE /* ann2.h */,
 				E47E88AA188460E9007643BE /* annsorter2.cpp */,
 				E47E88AB188460E9007643BE /* annsorter2.h */,
-				E47E88AC188460E9007643BE /* array2.h */,
 				E47E88AD188460E9007643BE /* bcc2.cpp */,
 				E47E88AE188460E9007643BE /* bcc2.h */,
 				E47E88AF188460E9007643BE /* bccmesher2.cpp */,
@@ -231,9 +230,7 @@
 				E47E88BE188460E9007643BE /* fastmarch2.h */,
 				E47E88BF188460E9007643BE /* femfluid2.cpp */,
 				E47E88C0188460E9007643BE /* femfluid2.h */,
-				E47E88C1188460E9007643BE /* flip2.cpp */,
-				E47E88C2188460E9007643BE /* flip2.h */,
-				E47E88C3188460E9007643BE /* fluid2.h */,
+				E4D1CE781884DA6D003FC6A6 /* flip2 */,
 				E47E88C4188460E9007643BE /* fvmfluid2.cpp */,
 				E47E88C5188460E9007643BE /* fvmfluid2.h */,
 				E47E88C6188460E9007643BE /* glhelpviewer.cpp */,
@@ -246,7 +243,6 @@
 				E47E88CD188460E9007643BE /* levelset2.h */,
 				E47E88CE188460E9007643BE /* macfluid2.cpp */,
 				E47E88CF188460E9007643BE /* macfluid2.h */,
-				E47E88D0188460E9007643BE /* macros.h */,
 				E47E88D1188460E9007643BE /* main.cpp */,
 				E47E88D2188460E9007643BE /* mesher2.cpp */,
 				E47E88D3188460E9007643BE /* mesher2.h */,
@@ -261,19 +257,15 @@
 				E47E88DC188460E9007643BE /* octree2.h */,
 				E47E88DD188460E9007643BE /* opengl.h */,
 				E47E88DE188460E9007643BE /* pann2.h */,
-				E47E88DF188460E9007643BE /* particle2.cpp */,
-				E47E88E0188460E9007643BE /* particle2.h */,
 				E47E88E1188460E9007643BE /* pcgsolver */,
 				E47E88E7188460E9007643BE /* sizefunc2.h */,
 				E47E88E8188460E9007643BE /* sorter2.h */,
 				E47E88E9188460E9007643BE /* surf2.cpp */,
 				E47E88EA188460E9007643BE /* surf2.h */,
-				E47E88EB188460E9007643BE /* svd2.h */,
 				E47E88EC188460E9007643BE /* testcase.h */,
 				E47E88ED188460E9007643BE /* umesher2.cpp */,
 				E47E88EE188460E9007643BE /* umesher2.h */,
 				E47E88EF188460E9007643BE /* util2.h */,
-				E47E88F0188460E9007643BE /* vec2.h */,
 				E47E88F1188460E9007643BE /* write_bmp.cpp */,
 				E47E88F2188460E9007643BE /* write_bmp.h */,
 			);
@@ -334,6 +326,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E4D1CE781884DA6D003FC6A6 /* flip2 */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1CE831884DC46003FC6A6 /* array2.h */,
+				E4D1CE791884DA6D003FC6A6 /* flip2.cpp */,
+				E4D1CE7A1884DA6D003FC6A6 /* flip2.h */,
+				E4D1CE7C1884DAC4003FC6A6 /* fluid2.h */,
+				E4D1CE801884DB30003FC6A6 /* macros.h */,
+				E4D1CE7D1884DAF6003FC6A6 /* particle2.cpp */,
+				E4D1CE7E1884DAF6003FC6A6 /* particle2.h */,
+				E4D1CE821884DC21003FC6A6 /* svd2.h */,
+				E4D1CE811884DB99003FC6A6 /* vec2.h */,
+			);
+			path = flip2;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,7 +371,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Rhody Lugo";
 			};
-			buildConfigurationList = E47E86E618845E97007643BE /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = E47E86E618845E97007643BE /* Build configuration list for PBXProject "AFLIP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -390,7 +398,6 @@
 				E47E8903188460E9007643BE /* bcc2.cpp in Sources */,
 				E47E8917188460E9007643BE /* octree2.cpp in Sources */,
 				E47E8919188460E9007643BE /* surf2.cpp in Sources */,
-				E47E8918188460E9007643BE /* particle2.cpp in Sources */,
 				E47E8908188460E9007643BE /* corrector2.cpp in Sources */,
 				E47E88FC188460E9007643BE /* kd_pr_search.cpp in Sources */,
 				E47E890F188460E9007643BE /* glhelpviewer.cpp in Sources */,
@@ -401,11 +408,13 @@
 				E47E88F5188460E9007643BE /* bd_fix_rad_search.cpp in Sources */,
 				E47E890E188460E9007643BE /* fvmfluid2.cpp in Sources */,
 				E47E890A188460E9007643BE /* extsurf2.cpp in Sources */,
+				E4D1CE7F1884DAF6003FC6A6 /* particle2.cpp in Sources */,
 				E47E88F6188460E9007643BE /* bd_pr_search.cpp in Sources */,
 				E47E8911188460E9007643BE /* levelset2.cpp in Sources */,
 				E47E88F7188460E9007643BE /* bd_search.cpp in Sources */,
 				E47E8904188460E9007643BE /* bccmesher2.cpp in Sources */,
 				E47E88F9188460E9007643BE /* brute.cpp in Sources */,
+				E4D1CE7B1884DA6D003FC6A6 /* flip2.cpp in Sources */,
 				E47E8916188460E9007643BE /* octfluid2.cpp in Sources */,
 				E47E88FE188460E9007643BE /* kd_split.cpp in Sources */,
 				E47E8906188460E9007643BE /* camera2.cpp in Sources */,
@@ -418,7 +427,6 @@
 				E47E88FF188460E9007643BE /* kd_tree.cpp in Sources */,
 				E47E8900188460E9007643BE /* kd_util.cpp in Sources */,
 				E47E88FB188460E9007643BE /* kd_fix_rad_search.cpp in Sources */,
-				E47E890D188460E9007643BE /* flip2.cpp in Sources */,
 				E47E8913188460E9007643BE /* main.cpp in Sources */,
 				E47E8902188460E9007643BE /* annsorter2.cpp in Sources */,
 				E47E88F3188460E9007643BE /* adaptive2.cpp in Sources */,
@@ -513,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E47E86E618845E97007643BE /* Build configuration list for PBXProject "test" */ = {
+		E47E86E618845E97007643BE /* Build configuration list for PBXProject "AFLIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E47E86F218845E97007643BE /* Debug */,
@@ -529,6 +537,7 @@
 				E47E86F618845E97007643BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
