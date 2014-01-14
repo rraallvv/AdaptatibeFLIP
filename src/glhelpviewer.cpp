@@ -20,7 +20,7 @@ using namespace std;
 using namespace testcase;
 
 static const char visibilityKeys[] = {
-	't',
+	'f',
 	'y',
 	'g',
 	'l',
@@ -94,7 +94,7 @@ static const char *controllerString[] = {
 };
 
 static const char *visibilityString[] = {
-	"Push \"%c\" to toggle sim time visibility. %s",
+	"Push \"%c\" to toggle frame-rate visibility. %s",
 	"Push \"%c\" to toggle grid line visibility. %s",
 	"Push \"%c\" to toggle grid velocity visibility. %s",
 	"Push \"%c\" to toggle liquid levelset visibility. %s",
@@ -134,7 +134,7 @@ glhelpviewer::glhelpviewer( glviewer& viewer, flip2& sim ) : viewer(viewer), sim
 	visibilityStates.push_back(false);	// particle velocity
 	visibilityStates.push_back(false);	// pressure
 	visibilityStates.push_back(false);	// neighborhood
-	visibilityStates.push_back(false);	// radius view
+	visibilityStates.push_back(true);	// radius view
 	visibilityStates.push_back(false);	// matrix connection
 	visibilityStates.push_back(true);	// external mesh view
 	default_visibilityStates = visibilityStates;
