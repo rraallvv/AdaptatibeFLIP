@@ -127,7 +127,7 @@ static size_t numVisibilityKeys = sizeof(visibilityString)/sizeof(const char *);
 static size_t numControllerKeys = sizeof(controllerKeys)/sizeof(char);
 
 glhelpviewer::glhelpviewer( glviewer& viewer, flip2& sim ) : viewer(viewer), sim(sim) {
-	visibilityStates.push_back(true);	// show sim time
+	visibilityStates.push_back(true);	// show FPS
 	visibilityStates.push_back(true);	// grid line
 	visibilityStates.push_back(false);	// grid velocity
 	visibilityStates.push_back(true);	// liquid levelset
