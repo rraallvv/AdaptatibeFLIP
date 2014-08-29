@@ -78,32 +78,32 @@ enum keyName {
 };
 
 static const char *controllerString[] = {
-	"Push \"%c\" to toggle help. %s",
-	"Push \"%c\" to reset the simulation. %s",
-	"Push \"%c\" to increase the resolution. %s",
-	"Push \"%c\" to decrease the resolution. %s",
-	"Push \"%c\" to restore defaults. %s",
-	"Push \"%c\" to change the accuracy of boundary condition. %s",
-	"Push \"%c\" to toggle variational pressure solver. %s",
-	"Push \"%c\" to toggle spring correction. %s",
-	"Push \"%c\" to change the test case. %s",
-    "Push \"%c\" to toggle adaptive sampling. %s",
-	"Push \"%c\" to change fluid solver. %s",
-	"Push \"%c\" to toggle grid remeshing. %s",
-	"Push \"%c\" to toggle external surface reconstructor. %s",
+	"%c Toggle help. %s",
+	"%c Reset the simulation. %s",
+	"%c Increase the resolution. %s",
+	"%c Decrease the resolution. %s",
+	"%c Restore defaults. %s",
+	"%c Change the accuracy of boundary condition. %s",
+	"%c Toggle variational pressure solver. %s",
+	"%c Toggle spring correction. %s",
+	"%c Change the test case. %s",
+    "%c Toggle adaptive sampling. %s",
+	"%c Change fluid solver. %s",
+	"%c Toggle grid remeshing. %s",
+	"%c Toggle external surface reconstructor. %s",
 };
 
 static const char *visibilityString[] = {
-	"Push \"%c\" to toggle frame-rate visibility. %s",
-	"Push \"%c\" to toggle grid line visibility. %s",
-	"Push \"%c\" to toggle grid velocity visibility. %s",
-	"Push \"%c\" to toggle liquid levelset visibility. %s",
-	"Push \"%c\" to toggle particle velocity visibility. %s",
-	"Push \"%c\" to toggle pressure visibility. %s",
-	"Push \"%c\" to toggle neighborhood visibility. %s",
-	"Push \"%c\" to toggle particle radius visibility. %s",
-	"Push \"%c\" to toggle matrix connection visibility. %s",
-	"Push \"%c\" to toggle external mesh visibility. %s",
+	"%c Toggle frame-rate visibility. %s",
+	"%c Toggle grid line visibility. %s",
+	"%c Toggle grid velocity visibility. %s",
+	"%c Toggle liquid levelset visibility. %s",
+	"%c Toggle particle velocity visibility. %s",
+	"%c Toggle pressure visibility. %s",
+	"%c Toggle neighborhood visibility. %s",
+	"%c Toggle particle radius visibility. %s",
+	"%c Toggle matrix connection visibility. %s",
+	"%c Toggle external mesh visibility. %s",
 };
 
 static const char *visibilityStatusStr[2] = {
@@ -338,7 +338,7 @@ void glhelpviewer::drawGL() {
 	size_t i=0;
 	for( i=0; i<numControllerKeys; i++ ) {
 		if( i==0 || controllerStates[S_HELP] ) {
-			glRasterPos2d(30*dw, 1.0-(i+1)*(peny)*dh-20*dh);
+			glRasterPos2d(20*dw, 1.0-(i+1)*(peny)*dh-20*dh);
 			const char *statusStr = controllerStatusStr[i].c_str();
 			if( statusStr[0] ) {
 				sprintf( statusText, "( %s )", statusStr );
@@ -347,13 +347,13 @@ void glhelpviewer::drawGL() {
 			}
 			
 			sprintf( text, controllerString[i], toupper(controllerKeys[i]), statusText );
-			glviewer::drawBitmapString(text,GLUT_BITMAP_HELVETICA_10);
+			glviewer::drawBitmapString(text,GLUT_BITMAP_8_BY_13);
 		}
 	}
 	
 	for( size_t j=0; j<numVisibilityKeys; j++ ) {
 		if( i==0 || controllerStates[S_HELP] ) {
-			glRasterPos2d(30*dw, 1.0-(j+i+1.5)*(peny)*dh-20*dh);
+			glRasterPos2d(20*dw, 1.0-(j+i+1.5)*(peny)*dh-20*dh);
 			const char *statusStr = visibilityStatusStr[1-visibilityStates[j]];
 			if( statusStr[0] ) {
 				sprintf( statusText, "( %s )", statusStr );
@@ -362,7 +362,7 @@ void glhelpviewer::drawGL() {
 			}
 			
 			sprintf( text, visibilityString[j], toupper(visibilityKeys[j]), statusText );
-			glviewer::drawBitmapString(text,GLUT_BITMAP_HELVETICA_10);
+			glviewer::drawBitmapString(text,GLUT_BITMAP_8_BY_13);
 		}
 	}
 #endif

@@ -567,7 +567,7 @@ FLOAT64 fvmfluid2::getDivergence( vec2d p ) const {
 }
 
 static void drawBitmapString( const char *string, void *font=NULL ) {
-	if( ! font ) font = GLUT_BITMAP_HELVETICA_10;
+	if( ! font ) font = GLUT_BITMAP_8_BY_13;
 	while (*string) glutBitmapCharacter(font, *string++);
 }
 
