@@ -19,7 +19,7 @@
 #define FRAMERATE		0	//(1.0/120.0)  // framerate of the video
 #define DURATION		5	// seconds
 #define MINSTEP			2
-#define PATH			"/Users/mscp/Desktop/img"		// Change here to change where to export images.
+#define PATH			"~/Desktop/img"		// Change here to change where to export images.
 
 // Window size
 static uint win_x = 600;
@@ -171,7 +171,7 @@ static void keyboard( unsigned char key, int x, int y ) {
 			break;
 		// Export for SVG file
 		case '\\':
-			viewer.writeSVG( "/Users/mscp/Desktop/particles.svg", "/Users/mscp/Desktop/" );
+			viewer.writeSVG( "~/Desktop/particles.svg", "~/Desktop/" );
 			break;
 		// Controls for debug
 		case ']':
