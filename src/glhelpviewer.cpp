@@ -249,13 +249,13 @@ bool glhelpviewer::keyDown( char key ) {
 	} else if( key == controllerKeys[K_INCR] || key == tolower(controllerKeys[K_INCR]) ) {
 		uint gn = controllerStates[S_RES];
 		if( gn < MAX_RES ) {
-			controllerStates[S_RES] = 2*gn;
+			controllerStates[S_RES] = gn+1;
 		}
 		keyHandled = true;
 	} else if( key == controllerKeys[K_DECR] || key == tolower(controllerKeys[K_DECR]) ) {
 		uint gn = controllerStates[S_RES];
 		if( gn > MIN_RES ) {
-			controllerStates[S_RES] = gn/2;
+			controllerStates[S_RES] = gn-1;
 		}
 		keyHandled = true;
 	} else if( key == controllerKeys[K_SURF] || key == tolower(controllerKeys[K_SURF]) ) {
