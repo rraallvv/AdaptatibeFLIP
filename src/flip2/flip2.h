@@ -42,8 +42,7 @@ public:
 	void setCorrection( bool enabled ); // Whether to use weak spring correction to improve particle spacing
     void setAdaptiveSampling( bool enabled );       // Whether to use adaptive sampling
 	void setRemesh( bool enabled );					// Whether to remesh if available
-	void setFluidSolver( uint name );				// Which solver to solve fluid flow
-
+	
 	uint	gn;							// Underlying grid resolution ( gn x gn )
 	uint	gm;							// Surface resolution
 	uint	step;						// Simulation step
@@ -95,9 +94,6 @@ public:
 	adaptive2 adaptive;					// Adaptive merging and splitting operator
 	corrector2 corrector;				// Particle position corrector
 	fluid2 *fluidSolver;				// Abstracted fluid solver
-	macfluid2 macSolver;				// MAC fluid solver
-    femfluid2 femSolver;				// FEM fluid solver
-	fvmfluid2 fvmSolver;				// FVM fluid solver
 	octfluid2 octSolver;				// OCT fluid solver
 	pann2 ann;							// ANN particle searcher
 	camera2	camera;						// 2D virtual camera

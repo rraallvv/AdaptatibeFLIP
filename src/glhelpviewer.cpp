@@ -56,7 +56,6 @@ enum stateName {
 	S_CORRECTION,
 	S_SCENE,
     S_ADAPTIVE,
-	S_SOLVER,
 	S_REMESH,
 	S_MESHER,
 };
@@ -72,7 +71,6 @@ enum keyName {
 	K_CORRECTION,
 	K_SCENE,
     K_ADAPTIVE,
-	K_SOLVER,
 	K_REMESH,
 	K_MESHER
 };
@@ -146,7 +144,6 @@ glhelpviewer::glhelpviewer( glviewer& viewer, flip2& sim ) : viewer(viewer), sim
 	controllerStates.push_back(1);		// spring correction
 	controllerStates.push_back(0);		// test case
     controllerStates.push_back(1);		// adaptive sampling
-	controllerStates.push_back(1);		// fluid solver
 	controllerStates.push_back(1);		// grid remesh
 	controllerStates.push_back(0);		// external surface reconstruction method
 	default_controllerStates = controllerStates;
@@ -166,12 +163,6 @@ void glhelpviewer::setControllerString() {
 	int state = controllerStates[S_CORRECTION];
 	if( state == 0 ) controllerStatusStr[K_CORRECTION] = "Current: Disabled";
 	else if( state == 1 ) controllerStatusStr[K_CORRECTION] = "Current: Enabled";
-	
-	state = controllerStates[S_SOLVER];
-	if( state == 0 ) controllerStatusStr[K_SOLVER] = "Current: MAC solver";
-	else if( state == 1 ) controllerStatusStr[K_SOLVER] = "Current: FEM solver";
-	else if( state == 2 ) controllerStatusStr[K_SOLVER] = "Current: FVM solver";
-	else if( state == 3 ) controllerStatusStr[K_SOLVER] = "Current: Octree solver";
 	
 	controllerStatusStr[K_REMESH] = controllerStates[S_REMESH] ? 
 	"Current: Enabled" : "Current: Disabled";
@@ -214,7 +205,6 @@ void glhelpviewer::applyStates( bool forceReset ) {
 	int state = controllerStates[S_CORRECTION];
 	sim.setCorrection(state);
 	sim.setAdaptiveSampling(controllerStates[S_ADAPTIVE]);
-	sim.setFluidSolver(controllerStates[S_SOLVER]);
 	sim.setRemesh(controllerStates[S_REMESH]);
 	viewer.setSurfaceExtractorMethod(controllerStates[S_MESHER]);
 	setControllerString();
@@ -293,11 +283,6 @@ bool glhelpviewer::keyDown( char key ) {
 		int enabled = controllerStates[S_ADAPTIVE];
 		enabled = enabled == 1 ? 0 : 1;
 		controllerStates[S_ADAPTIVE] = enabled;
-		keyHandled = true;
-	} else if( key == controllerKeys[K_SOLVER] || key == tolower(key == controllerKeys[K_SOLVER]) ) {
-		int name = controllerStates[S_SOLVER];
-		name = (name+1)%4;
-		controllerStates[S_SOLVER] = name;
 		keyHandled = true;
 	} else if( key == controllerKeys[K_REMESH] || key == tolower(key == controllerKeys[K_REMESH]) ) {
 		int enabled = controllerStates[S_REMESH];

@@ -107,7 +107,7 @@ flip2::flip2() {
 	extrapolation_dist = 1.0;
 	solid = NULL;
 	fluid = NULL;
-	fluidSolver = &femSolver;
+	fluidSolver = &octSolver;
 	sorter = &annsorter;
 	surf_sorter = &surf_annsorter;
 	remeshLevelset = new remeshLevelset2(*this);
@@ -145,46 +145,6 @@ void flip2::setAdaptiveSampling( bool enabled ) {
 void flip2::setRemesh( bool enabled ) {
 	doRemesh = enabled;
 	parameterChanged();
-}
-
-void flip2::setFluidSolver( uint name ) {
-	fluid2 *old = fluidSolver;
-	if( name == 0 ) {
-		fluidSolver = &macSolver;
-	} else if( name == 1 ) {
-		fluidSolver = &femSolver;
-	} else if( name == 2 ) {
-		fluidSolver = &fvmSolver;
-	} else if( name == 3 ) {
-		fluidSolver = &octSolver;
-	}
-	
-	if( old != fluidSolver ) {
-		// Make sure the simulation is initialized by taking a look of "solid" pointer
-		if( solid ) {
-			fluidSolver->init(gn,doRemesh ? remeshLevelset : NULL);
-			fluidSolver->setupSolidLevelset(solid);
-			
-			// Save old levelset
-			surf0 = surf;
-			// Save old levelset
-			if( fluidSolver->getOctree() ) {
-				resampleLevelsetOnOctree(fluid,octLevelset,*fluidSolver->getOctree());
-			}
-			
-			// Set levelset
-			fluidSolver->setupFluidLevelset(this);
-			
-			// Set sorter
-			sorter->sortParticles(particles);
-
-			// Build surface
-			sortSurfaceParticles(*surf_sorter,particles,surf_particles);
-			surf.setResolution(gm);
-			surf.buildSurface(this,solid,fluidSolver);
-			surf_sorter->setDirty();
-		}
-	}
 }
 
 void flip2::init( uint gsize, levelset2* fluid, levelset2* solid, FLOAT64 gscale ) {
