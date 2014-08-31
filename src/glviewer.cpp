@@ -102,6 +102,11 @@ void glviewer::drawBitmapString( const char *string, void *font ) {
 	while (*string) glutBitmapCharacter(font, *string++);
 }
 
+void glviewer::drawStrokeString( const char *string, void *font ) {
+	if( ! font ) font = GLUT_STROKE_MONO_ROMAN;
+	while (*string) glutStrokeCharacter(font, *string++);
+}
+
 void glviewer::setMousePressed( bool pressed ) {
 	this->pressed = pressed;
 }

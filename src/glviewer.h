@@ -44,6 +44,7 @@ public:
 	
 	// Public utility functions
 	static void drawBitmapString( const char *string, void *font=NULL );
+	static void drawStrokeString( const char *string, void *font=NULL );
 protected:
 	const flip2& sim;
 	extsurf2 extsurf;

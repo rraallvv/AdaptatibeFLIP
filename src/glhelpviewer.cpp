@@ -41,7 +41,7 @@ static const char controllerKeys[] = {
 	'b',
 	'v',
 	's',
-	' ',
+	't',
     'a',
 	'm',
 	'i',
@@ -323,7 +323,7 @@ void glhelpviewer::drawGL() {
 	int winsize[2] = { glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT) };
 	double dw = 1.0/(double)winsize[0];
 	double dh = 1.0/(double)winsize[1];
-	int peny = 15;
+	int peny = 30;
 	char text[256];
 	char statusText[256];
 	
@@ -333,12 +333,19 @@ void glhelpviewer::drawGL() {
 		glRectf(0.0,0.0,1.0,1.0);
 	}
 	
+	double scale = .00027;
+	
 	// Now show texts...
+	glPushMatrix();
+	glLoadIdentity();
+	glTranslatef(-1, 0, 0);
 	glColor4f(1.0,1.0,1.0,1.0);
 	size_t i=0;
 	for( i=0; i<numControllerKeys; i++ ) {
 		if( i==0 || controllerStates[S_HELP] ) {
-			glRasterPos2d(20*dw, 1.0-(i+1)*(peny)*dh-20*dh);
+			glPushMatrix();
+			glTranslatef(20*dw, 1.0-(i+1)*(peny)*dh-20*dh, 0);
+			glScalef(scale,scale,1);
 			const char *statusStr = controllerStatusStr[i].c_str();
 			if( statusStr[0] ) {
 				sprintf( statusText, "( %s )", statusStr );
@@ -347,13 +354,16 @@ void glhelpviewer::drawGL() {
 			}
 			
 			sprintf( text, controllerString[i], toupper(controllerKeys[i]), statusText );
-			glviewer::drawBitmapString(text,GLUT_BITMAP_8_BY_13);
+			glviewer::drawStrokeString(text,GLUT_STROKE_MONO_ROMAN);
+			glPopMatrix();
 		}
 	}
 	
 	for( size_t j=0; j<numVisibilityKeys; j++ ) {
 		if( i==0 || controllerStates[S_HELP] ) {
-			glRasterPos2d(20*dw, 1.0-(j+i+1.5)*(peny)*dh-20*dh);
+			glPushMatrix();
+			glTranslatef(20*dw, 1.0-(j+i+1.5)*(peny)*dh-20*dh, 0);
+			glScalef(scale,scale,1);
 			const char *statusStr = visibilityStatusStr[1-visibilityStates[j]];
 			if( statusStr[0] ) {
 				sprintf( statusText, "( %s )", statusStr );
@@ -362,8 +372,11 @@ void glhelpviewer::drawGL() {
 			}
 			
 			sprintf( text, visibilityString[j], toupper(visibilityKeys[j]), statusText );
-			glviewer::drawBitmapString(text,GLUT_BITMAP_8_BY_13);
+			glviewer::drawStrokeString(text,GLUT_STROKE_MONO_ROMAN);
+			glPopMatrix();
 		}
 	}
+	
+	glPopMatrix();
 #endif
 }
