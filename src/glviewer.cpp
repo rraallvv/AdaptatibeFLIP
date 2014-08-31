@@ -13,10 +13,8 @@
 #include "levelset2.h"
 #include "particle2.h"
 #include "util2.h"
-#include "macfluid2.h"
 #include "write_bmp.h"
 #include "octhash2.h"
-#include "femfluid2.h"
 #include "extsurf2.h"
 #include <math.h>
 #include <vector>
